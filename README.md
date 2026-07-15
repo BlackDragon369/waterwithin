@@ -1,57 +1,39 @@
-# React + TypeScript + Vite
+# 生命之虹 · 成果式议题教练
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 对话即成长，口袋里的生命流动导师
 
-Currently, two official plugins are available:
+一款基于 Web 的生命教练式成长陪伴应用，以 16 色彩虹隐喻人生四个阶段的成长议题，通过"土壤浇灌·内心植物成长"的视觉化隐喻，引导用户从微行动出发，逐步实现各阶段的人生成果。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ 核心特性
 
-## Expanding the ESLint configuration
+- 🌈 **16 色生命之虹** — 四个年龄阶段（20-30 / 30-40 / 40-50 / 50-60+），16 道成果式议题
+- 🎨 **8 种可视化场景** — 海滩、树木、老井、河流、山峦、花园、小径、光
+- 💬 **图画式引导 + 三层开放式提问** — 基于玛丽莲·阿特金森《流动·教练的核心》
+- 🪜 **微行动阶梯** — 本周 → 本月 → 本季 → 本年，from small to large
+- 🌱 **内心植物成长** — 浇灌打卡触发种子→萌芽→长叶→开花→结果
+- 📖 **成长日志时间线** — 植物茎干为轴，记录每一次浇灌
+- 💾 **本地持久化** — 所有数据存于 localStorage，无需登录
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 本地开发
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 构建部署
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  extends: [
-    // other configs...
-    // Enable lint rules for React
-    reactX.configs['recommended-typescript'],
-    // Enable lint rules for React DOM
-    reactDom.configs.recommended,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm run build
 ```
+
+构建产物在 `dist/` 目录，已配置 GitHub Pages 自动部署工作流。
+
+## 🛠 技术栈
+
+- React 18 + TypeScript
+- Vite
+- TailwindCSS
+- Zustand（状态管理）
+- Framer Motion（动画）
+- React Router（HashRouter）

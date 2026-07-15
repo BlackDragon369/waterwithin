@@ -4,6 +4,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vite.dev/config/
 export default defineConfig({
+  // GitHub Pages 部署需要设置 base 为仓库名路径
+  base: '/waterwithin/',
   build: {
     sourcemap: 'hidden',
   },
